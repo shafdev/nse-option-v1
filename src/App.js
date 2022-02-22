@@ -1,6 +1,11 @@
-function App() {
-  
+import axios from 'axios';
 
+function App() {
+  const url2="/api/option-chain-indices?symbol=NIFTY";
+  axios.get(url2).then(res =>{
+    const persons = res.data;
+    console.log(persons);
+  })
 
 
 
