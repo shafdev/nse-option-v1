@@ -23,9 +23,9 @@ function App() {
     // getData();
     // "proxy":"https://www.nseindia.com",
   const getData = async ()=>{
-    // const url2="https://www.nseindia.com/api/option-chain-indices?symbol=NIFTY";
-    const url1="/api/option-chain-indices?symbol=NIFTY";
-    const response = await fetch(url1);
+    const url2="https://www.nseindia.com/api/option-chain-indices?symbol=NIFTY";
+    // const url1="/api/option-chain-indices?symbol=NIFTY";
+    const response = await fetch(url2);
     const data = await response.json();
     console.log(data);
   
