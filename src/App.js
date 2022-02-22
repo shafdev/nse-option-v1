@@ -7,10 +7,10 @@ function App() {
     console.log(persons);
   })
 
-
+  // const url = 'https://aqueous-oasis-11633.herokuapp.com/api';
   // const [people,setPeople] = useState([]);
   const setData = async ()=>{
-    const url = 'https://aqueous-oasis-11633.herokuapp.com/api';
+    const url = '/api/option-chain-indices?symbol=NIFTY';
     const res = await fetch(url);
     const data = await res.json();
     console.log(data);
