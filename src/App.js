@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+import { useEffect } from 'react';
 function App() {
   const url2="/api/option-chain-indices?symbol=NIFTY";
   axios.get(url2).then(res =>{
@@ -8,7 +8,18 @@ function App() {
   })
 
 
-
+  // const [people,setPeople] = useState([]);
+  const setData = async ()=>{
+    const url = 'https://aqueous-oasis-11633.herokuapp.com/api';
+    const res = await fetch(url);
+    const data = await res.json();
+    console.log(data);
+    // const nameList = data;
+    // setPeople(data)
+  }
+  useEffect(()=>
+    setData()
+  ,[])
 
 
 
